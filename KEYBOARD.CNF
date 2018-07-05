@@ -1,0 +1,322 @@
+; Sample of KEYBOARD.CNF for the IBM-PC/AT 101-key keyboard.
+; See KEYCODE.TXT for the description of the format.
+;
+; This file based on IBMKEYB.CNF
+; 1. send the symbol of each key top "as-is" at editor keypad.
+;
+[VT editor keypad]
+;Up arrow key
+Up=328
+;Down arrow key
+Down=336
+;Right arrow key
+Right=333
+;Left arrow key
+Left=331
+;Insert key
+Insert=338
+;Home key
+Find=327
+;PageUp key
+Prev=329
+;Delete key
+Remove=339
+;End key
+Select=335
+;PageDown key
+Next=337
+
+[VT numeric keypad]
+;Num pad 0 key
+Num0=82
+;Num pad 1 key
+Num1=79
+;Num pad 2 key
+Num2=80
+;Num pad 3 key
+Num3=81
+;Num pad 4 key
+Num4=75
+;Num pad 5 key
+Num5=76
+;Num pad 6 key
+Num6=77
+;Num pad 7 key
+Num7=71
+;Num pad 8 key
+Num8=72
+;Num pad 9 key
+Num9=73
+;Ctrl + Num pad '+' key
+NumMinus=1102
+;Num pad '+' key
+NumComma=78
+;Num pad '.' key
+NumPeriod=83
+;Num pad Enter key
+NumEnter=284
+;Num pad NumLock key
+PF1=325
+;Num pad '/' key
+PF2=309
+;Num pad '*' key
+PF3=55
+;Num pad '-' key
+PF4=74
+
+[VT function keys]
+Hold=off
+Print=off
+Break=off
+; F1 key
+F1=59
+; F2 key
+F2=60
+; F3 key
+F3=61
+; F4 key
+F4=62
+; F5 key
+F5=63
+;F6 key
+F6=64
+;F7 key
+F7=65
+;F8 key
+F8=66
+;F9 key
+F9=67
+;F10 key
+F10=68
+;F11 key
+F11=87
+;F12 key
+F12=88
+;;Shift + F3 key
+;F13=573
+;;Shift + F4 key
+;F14=574
+;;Shift + F5 key
+;Help=575
+;;Shift + F6 key
+;Do=576
+;;Shift + F7 key
+;F17=577
+;;Shift + F8 key
+;F18=578
+;;Shift + F9 key
+;F19=579
+;;Shift + F10 key
+;F20=580
+;;Ctrl + F6 key
+;UDK6=1088
+;;Ctrl + F7 key
+;UDK7=1089
+;;Ctrl + F8 key
+;UDK8=1090
+;;Ctrl + F9 key
+;UDK9=1091
+;;Ctrl + F10 key
+;UDK10=1092
+;;Ctrl + F11 key
+;UDK11=1111
+;;Ctrl + F12 key
+;UDK12=1112
+;;Ctrl + Shift + F3 key
+;UDK13=1597
+;;Ctrl + Shift + F4 key
+;UDK14=1598
+;;Ctrl + Shift + F5 key
+;UDK15=1599
+;;Ctrl + Shift + F6 key
+;UDK16=1600
+;;Ctrl + Shift + F7 key
+;UDK17=1601
+;;Ctrl + Shift + F8 key
+;UDK18=1602
+;;Ctrl + Shift + F9 key
+;UDK19=1603
+;;Ctrl + Shift + F10 key
+;UDK20=1604
+
+[X function keys]
+; F1 key
+;XF1=59
+; F2 key
+;XF2=60
+; F3 key
+;XF3=61
+; F4 key
+;XF4=62
+; F5 key
+;XF5=63
+; Shift + Tab key
+XBackTab=527
+
+[Shortcut keys]
+; Ctrl + Insert
+EditCopy=1362
+; Shift + Insert
+EditPaste=850
+EditPasteCR=off
+EditCLS=off
+EditCLB=off
+ControlOpenTEK=off
+ControlCloseTEK=off
+; Ctrl + up-arrow
+;LineUp=1352
+; Ctrl + down-arrow
+;LineDown=1360
+; Ctrl + PageUp
+;PageUp=1353
+; Ctrl + PageDown
+;PageDown=1361
+; Ctrl + Home
+BuffTop=1351
+; Ctrl + End
+BuffBottom=1359
+; Ctrl + Tab
+;NextWin=1039
+;NextShownWin=off
+; Ctrl + Shift + Tab
+;PrevWin=1551
+;PrevShownWin=off
+;LocalEcho=off
+; ScrollLock
+ScrollLock=70
+
+
+
+;Example of user key definitions.
+;[User keys]
+;	Ctrl + F1 key: character string
+;User1=1083,0,telnet myhost
+;
+;	Ctrl + F2 key: control characters
+;User2=1084,0,$0D$0A
+;
+;	Ctrl + F3 key: CR character with new-line code conversion (CR -> CR/CR+LF)
+;User3=1085,1,$0D
+;
+;	Ctrl + F4 key: Executing a macro file
+;User4=1086,2,test.ttl
+;
+;	Ctrl + F5 key: Executing a menu command
+;User5=1087,3,50110
+[User keys]
+; PC special keys: Shift- Up, Down, Right, Left
+User1=840,0,$1B[a
+User2=848,0,$1B[b
+User3=845,0,$1B[c
+User4=843,0,$1B[d
+; PC special keys: Ctrl- Up, Down, Right, Left
+User5=1352,0,$1B[1;5A
+User6=1360,0,$1B[1;5B
+User7=1357,0,$1B[1;5C
+User8=1355,0,$1B[1;5D
+; PC special keys: Ctrl- Shift - Up, Down, Right, Left
+User9=1864,0,$1B[1;6A
+User10=1872,0,$1B[1;6B
+User11=1869,0,$1B[1;6C
+User12=1867,0,$1B[1;6D
+User13=59,0,$1BOP
+User14=60,0,$1BOQ
+User15=61,0,$1BOR
+User16=62,0,$1BOS
+; Ctrl + Tab
+User17=1039,0,$1B[27;5;9~
+; Shift + Ctrl + Tab
+User18=1551,0,$1B[27;6;9~
+; Shift Function key
+; Shift F1
+User19=571,0,$1B[1;2P
+; Shift F2
+User20=572,0,$1B[1;2Q
+; Shift F3
+User21=573,0,$1B[1;2R
+; Shift F4
+User22=574,0,$1B[1;2S
+; Shift F5
+User23=575,0,$1B[15;2~
+; Shift F6
+User24=576,0,$1B[17;2~
+; Shift F7
+User25=577,0,$1B[18;2~
+; Shift F8
+User26=578,0,$1B[19;2~
+; Shift F9
+User27=579,0,$1B[20;2~
+; Shift F10
+User28=580,0,$1B[21;2~
+; Shift F11
+User29=599,0,$1B[23;2~
+; Shift F12
+User30=600,0,$1B[24;2~
+; Ctrl F1
+User31=1083,0,$1B[1;5P
+; Ctrl F2
+User32=1084,0,$1B[1;5Q
+; Ctrl F3
+User33=1085,0,$1B[1;5R
+; Ctrl F4
+User34=1086,0,$1B[1;5S
+; Ctrl F5
+User35=1087,0,$1B[15;5~
+; Ctrl F6
+User36=1088,0,$1B[17;5~
+; Ctrl F7
+User37=1089,0,$1B[18;5~
+; Ctrl F8
+User38=1090,0,$1B[19;5~
+; Ctrl F9
+User39=1091,0,$1B[20;5~
+; Ctrl F10
+User40=1092,0,$1B[21;5~
+; Ctrl F11
+User41=1111,0,$1B[23;5~
+; Ctrl F12
+User42=1112,0,$1B[24;5~
+; Ctrl Shift F1
+User43=1595,0,$1B[1;6P
+; Ctrl Shift F2
+User44=1596,0,$1B[1;6Q
+; Ctrl Shift F3
+User45=1597,0,$1B[1;6R
+; Ctrl Shift F4
+User46=1598,0,$1B[1;6S
+; Ctrl Shift F5
+User47=1599,0,$1B[15;6~
+; Ctrl Shift F6
+User48=1600,0,$1B[17;6~
+; Ctrl Shift F7
+User49=1601,0,$1B[18;6~
+; Ctrl Shift F8
+User50=1602,0,$1B[19;6~
+; Ctrl Shift F9
+User51=1603,0,$1B[20;6~
+; Ctrl Shift F10
+User52=1604,0,$1B[21;6~
+; Ctrl Shift F11
+User53=1623,0,$1B[23;6~
+; Ctrl Shift F12
+User54=1624,0,$1B[24;6~
+; Shift PageUp
+User55=841,0,$1B[5;2~
+; Shift PageDown
+User56=849,0,$1B[6;2~
+; Ctrl + PageUp
+User57=1353,0,$1B[5;5~
+; Ctrl + PageDown
+User58=1361,0,$1B[6;5~
+; Ctrl Shift PageUp
+User59=1865,0,$1B[5;6~
+; Ctrl Shift PageDown
+User60=1873,0,$1B[6;6~
+; Alt Up
+User61=2376,0,$1B[1;3A
+; Alt Down
+User62=2384,0,$1B[1;3B
+; Alt Right
+User63=2381,0,$1B[1;3C
+; Alt Left
+User64=2379,0,$1B[1;3D
